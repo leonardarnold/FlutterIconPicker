@@ -3,14 +3,14 @@
 /// https://github.com/Ahmadre
 /// rebar.ahmad@gmail.com
 
-export 'Packs/Material.dart';
+export 'Packs/material_icon_pack.dart';
 export 'Packs/Cupertino.dart';
 export 'Packs/FontAwesome.dart';
 export 'Packs/LineIcons.dart';
 
 import '../Models/IconPack.dart';
 
-import 'Packs/Material.dart';
+import 'Packs/material_icon_pack.dart';
 import 'Packs/Cupertino.dart';
 import 'Packs/FontAwesome.dart';
 import 'Packs/LineIcons.dart';
@@ -21,7 +21,7 @@ class IconManager {
   static Map<String, IconData> getSelectedPack(IconPack? pickedPack) {
     switch (pickedPack) {
       case IconPack.material:
-        return icons;
+        return MaterialIconPack.icons;
       case IconPack.cupertino:
         return cupertinoIcons;
       case IconPack.fontAwesomeIcons:
@@ -29,7 +29,7 @@ class IconManager {
       case IconPack.lineAwesomeIcons:
         return lineAwesomeIcons;
       default:
-        return icons;
+        return MaterialIconPack.icons;
     }
   }
 }
